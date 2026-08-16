@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArduMedi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>ArduMedi</h1>
+  </header>
+
+  <main>
+    <section class="connect-bar">
+      <button id="connectBtn" class="btn" type="button">Connect</button>
+      <span id="status" class="status">Not connected</span>
+    </section>
+
+    <p class="hint">Click on the connect button and select the COM port to start using the system!</p>
+
+    <section class="cards">
+      <div class="card">
+        <span class="label">Temperature</span>
+        <span class="value temp" id="temp">--</span>
+      </div>
+
+      <div class="card">
+        <span class="label">Humidity</span>
+        <span class="value humidity" id="humidity">--</span>
+      </div>
+
+      <div class="card">
+        <span class="label">Air Quality</span>
+        <span class="value gas" id="gas">--</span>
+      </div>
+
+      <div class="card heart-card">
+        <span class="label">Heart Rate</span>
+        <span class="value heart" id="heart">--</span>
+        <span class="note" id="heartSub">Press the button on your device to measure</span>
+      </div>
+    </section>
+
+    <section class="card graph-card">
+      <span class="label">BPM History</span>
+      <canvas id="bpmChart"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
