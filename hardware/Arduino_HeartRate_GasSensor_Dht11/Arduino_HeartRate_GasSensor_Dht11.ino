@@ -7,15 +7,15 @@
     - DHT11                 temperature + humidity
     - MQ (gas) sensor       air quality as a percentage
 
-  Push the button to start measuring your heart rate; release it to stop.
+  The push button is to start measuring your heart rate; when released it to stops measuring your heart rate.
   The web dashboard (Web Serial API) parses the serial output below.
 
   Wiring (Arduino Uno):
     MAX3010x : VIN -> 3.3V   GND -> GND   SDA -> A4   SCL -> A5
     DHT11    : VCC -> 5V   GND -> GND   DAT -> pin 3
     Gas      : VCC -> 5V   GND -> GND   A0  -> A0
-    Button   : pin 2  -> GND (INPUT_PULLUP, pressed = LOW)
-    LED      : pin 13 (onboard, lights while measuring)
+    Button   : pin 2  -> GND (Using Input PULLUP)
+    LED      : pin 13 (Used so you know when you are reading BPM)
 
   Serial protocol (115200 baud):
     M,1         measuring started (button pressed)
